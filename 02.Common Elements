@@ -1,0 +1,37 @@
+using System;
+
+namespace _02.Common_Elements
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] arrOne = Console.ReadLine().Split(' ');
+            string[] arrTwo = Console.ReadLine().Split(' ');
+            string firstElement = "";
+            string secondElement = "";
+            string currElement = "";
+            string[] commonElements = new string[0];
+
+
+            for (int i = 0; i < arrTwo.Length; i++)
+            {
+                firstElement = arrTwo [i];
+                for (int j = 0; j < arrOne.Length ; j++)
+                {
+                    secondElement = arrOne[j];
+
+                    if (firstElement == secondElement)
+                    {
+                        currElement = secondElement;
+
+                        Console.Write($"{currElement} ");
+                        break;
+                    }
+                }
+
+            }
+            
+        }
+    }
+}
